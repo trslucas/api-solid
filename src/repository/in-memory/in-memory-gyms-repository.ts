@@ -34,4 +34,10 @@ export class InMemoryGymsRepository implements GymsRepository {
 
     return gym
   }
+
+  async serachMany(gymName: string, page: number) {
+    return this.items
+      .filter((item) => item.title === gymName)
+      .slice((page - 1) * 20, page * 20)
+  }
 }
