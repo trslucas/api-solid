@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 
 import { InMemoryCheckInsRepository } from '@/repository/in-memory/in-memory-check-ins-repository'
 
@@ -7,7 +7,7 @@ import { FetchUserCheckinHistoryUseCase } from './fetch-user-check-ins-history'
 let checkInsRepository: InMemoryCheckInsRepository
 let sut: FetchUserCheckinHistoryUseCase
 
-describe('Fetch User Check In Use Case', () => {
+describe('Get User Metrics Check In Use Case', () => {
   beforeEach(async () => {
     checkInsRepository = new InMemoryCheckInsRepository()
 
